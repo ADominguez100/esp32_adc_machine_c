@@ -20,7 +20,7 @@ void ADC_Task (void *pvParameters)
   {
     adc_raw = adc1_get_raw(ADC_CHANNEL_4);
     voltage = esp_adc_cal_raw_to_voltage(adc_raw, &adc_chars);
-    printf("ADC val: %d \t Voltage: %d mV\n", adc_raw, voltage);
+    printf("Valor d'ADC: %d \t Voltatje: %d mV\n", adc_raw, voltage); // Modifiquem el print al català
     vTaskDelay(pdMS_TO_TICKS(1000));
   }
 }
